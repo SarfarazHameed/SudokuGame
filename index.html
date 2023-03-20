@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <link href="/dist/output.css" rel="stylesheet">
+
+    <!-- Bootstrap Js -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <!-- My CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- My JS -->
+    <script src="main.js"></script>
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/996973c893.js"></script>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400;500;600;700;800&family=Roboto+Slab:wght@200;400;600;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Sudoku Game</title>
+    </head>
+    <header id="header">
+        <div class="row">
+            <div class="col-12" style="padding-top: 1vw; text-align: center;">
+                <h1 class="d-inline" id="sudoku-heading">Sudoku</h1>
+                <div class="float-right" style="position:relative; right:2vw; top:1vw; align-content:center;">
+                    <a href="#" id="theme-toggle" class="text-dark"><i class="fas fa-adjust"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6" id="difficulty">
+              <div class="row">
+                <div class="col-6">
+                  <h3 id="difficulty-colon">difficulty: </h3>
+                </div>
+                <div class="col-6" id="diff-dropdown">
+                  <select name="difficulty" id="difficulty">
+                    <option value="easy" id="diff1">Easy</option>
+                    <option value="medium" id="diff2" selected>Medium</option>
+                    <option value="hard" id="diff3">Hard</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-6" id="time">
+              <div class="row">
+                <div class="col-6">
+                  <h3 id="time-colon">time: </h3>
+                </div>
+                <div class="col-6" id="time-dropdown">
+                  <select name="time" id="time">
+                    <option value="three" id="time1">5 minutes</option>
+                    <option value="five" id="time2" selected>7 minutes</option>
+                    <option value="seven" id="time3">10 minutes</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <div class="row" style="justify-content: center; padding-bottom: 1vmin;">
+          <button id="start-button">Start Game</button>
+        </div>
+    </header>
+
+    <div id="body">
+      <!-- <embed src="summer_nights.mp3" loop="true" autostart="true" width="2" height="0"> -->
+        <audio controls autoplay>
+          <source src="summer_nights.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      <!-- My JS -->
+    <script src="main.js"></script>
+
+      <div class="timer">
+        <p id="timer"></p>
+      </div>
+
+      <div id="win_loss" class="hidden">
+        <p id="win_loss_status" style="text-align: center; justify-content: center;"></p>
+      </div>
+
+      <!-- Game division containing the Sudoku board and number containers -->
+      <div id="game">
+        <div id="board"></div>
+        <div id="number-container">
+          <button id="1">1</button>
+          <button id="2">2</button>
+          <button id="3">3</button>
+          <button id="4">4</button>
+          <button id="5">5</button>
+          <button id="6">6</button>
+          <button id="7">7</button>
+          <button id="8">8</button>
+          <button id="9">9</button>
+        </div>
+      </div>
+
+      <!-- My JS -->
+    <script src="main.js"></script>
+    </div>
+</html>
